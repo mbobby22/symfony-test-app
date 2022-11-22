@@ -1,0 +1,26 @@
+<table class="table" data-toggle="table">
+    <thead>
+    <tr>
+        <th>{% trans %}table.head.date{% endtrans %}</th>
+        <th>{% trans %}table.head.open{% endtrans %}</th>
+        <th>{% trans %}table.head.high{% endtrans %}</th>
+        <th>{% trans %}table.head.low{% endtrans %}</th>
+        <th>{% trans %}table.head.close{% endtrans %}</th>
+        <th>{% trans %}table.head.volume{% endtrans %}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in data %}
+        {% if item.date and item.open and item.high and item.low and item.close and item.volume %}
+        <tr>
+            <td>{{ item.date }}</td>
+            <td>{{ item.open }}</td>
+            <td>{{ item.high }}</td>
+            <td>{{ item.low }}</td>
+            <td>{{ item.close }}</td>
+            <td>{{ item.volume }}</td>
+        </tr>
+        {% endif %}
+    {% endfor %}
+    </tbody>
+</table>
